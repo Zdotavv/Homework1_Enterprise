@@ -3,20 +3,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userService" class="com.zdotavv.homework1_enterprise.Service.UserService">
-        <property name="user" ref="User"/>
+    <bean id="userService" class="com.zdotavv.homework1_enterprise.Service.UserServiceImpl">
+        <property name="user" ref="user"/>
     </bean>
 
-    <bean id="User" class="com.zdotavv.homework1_enterprise.User">
+    <bean id="user" class="com.zdotavv.homework1_enterprise.User">
     </bean>
 
-    <bean id="ResourceReader" class="com.zdotavv.homework1_enterprise.ResourceReader" init-method="reader">
+    <bean id="ResourceReader" class="com.zdotavv.homework1_enterprise.ResourceReaderImpl" init-method="reader">
         <property name="resource" value="questions.csv"/>
     </bean>
 
-    <bean id="quizService" class="com.zdotavv.homework1_enterprise.Service.QuizService">
+    <bean id="quizService" class="com.zdotavv.homework1_enterprise.Service.QuizServiceImpl">
         <property name="resourceReader" ref="ResourceReader"/>
-        <property name="user" ref="User"/>
+        <property name="user" ref="user"/>
     </bean>
 
 </beans>
