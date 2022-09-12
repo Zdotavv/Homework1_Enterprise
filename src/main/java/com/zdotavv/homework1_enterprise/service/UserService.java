@@ -1,4 +1,4 @@
-package com.zdotavv.homework1_enterprise.Service;
+package com.zdotavv.homework1_enterprise.service;
 
 public interface UserService {
     void userNameAndSurname();

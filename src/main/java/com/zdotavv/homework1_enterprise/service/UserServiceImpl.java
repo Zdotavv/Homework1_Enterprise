@@ -1,13 +1,15 @@
-package com.zdotavv.homework1_enterprise.Service;
+package com.zdotavv.homework1_enterprise.service;
 
 import com.zdotavv.homework1_enterprise.User;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Service;
 
 import java.util.Scanner;
 
 @Getter
 @Setter
+@Service
 public class UserServiceImpl implements UserService {
     private User user;
 

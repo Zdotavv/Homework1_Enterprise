@@ -1,9 +1,10 @@
-package com.zdotavv.homework1_enterprise.Service;
+package com.zdotavv.homework1_enterprise.service;
 
-import com.zdotavv.homework1_enterprise.ResourceReaderImpl;
+import com.zdotavv.homework1_enterprise.ResourceReader;
 import com.zdotavv.homework1_enterprise.User;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +12,8 @@ import java.util.Scanner;
 @Getter
 @Setter
 public class QuizServiceImpl implements QuizService {
-    private ResourceReaderImpl resourceReader;
+    private ResourceReader resourceReader;
+    @Autowired
     private User user;
     private int number;
     private int score;

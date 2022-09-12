@@ -1,7 +1,7 @@
 package com.zdotavv.homework1_enterprise;
 
-import com.zdotavv.homework1_enterprise.Service.QuizServiceImpl;
-import com.zdotavv.homework1_enterprise.Service.UserServiceImpl;
+import com.zdotavv.homework1_enterprise.service.QuizServiceImpl;
+import com.zdotavv.homework1_enterprise.service.UserServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

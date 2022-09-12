@@ -3,18 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userService" class="com.zdotavv.homework1_enterprise.Service.UserServiceImpl">
+    <bean id="userService" class="com.zdotavv.homework1_enterprise.service.UserServiceImpl">
         <property name="user" ref="user"/>
     </bean>
 
     <bean id="user" class="com.zdotavv.homework1_enterprise.User">
     </bean>
 
-    <bean id="ResourceReader" class="com.zdotavv.homework1_enterprise.ResourceReaderImpl" init-method="reader">
+    <bean id="ResourceReader" class="com.zdotavv.homework1_enterprise.ResourceReader" init-method="reader">
         <property name="resource" value="questions.csv"/>
     </bean>
 
-    <bean id="quizService" class="com.zdotavv.homework1_enterprise.Service.QuizServiceImpl">
+    <bean id="quizService" class="com.zdotavv.homework1_enterprise.service.QuizServiceImpl">
         <property name="resourceReader" ref="ResourceReader"/>
         <property name="user" ref="user"/>
     </bean>
