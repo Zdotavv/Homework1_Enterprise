@@ -1,6 +1,7 @@
 package com.zdotavv.homework1_enterprise.service.impl;
 
 import com.zdotavv.homework1_enterprise.Application;
+import com.zdotavv.homework1_enterprise.service.QuizService;
 import com.zdotavv.homework1_enterprise.service.ResourceReader;
 import com.zdotavv.homework1_enterprise.User;
 import lombok.Getter;
@@ -12,7 +13,7 @@ import java.util.Scanner;
 
 @Getter
 @Setter
-public class QuizServiceImpl implements Application.QuizService {
+public class QuizServiceImpl implements QuizService {
     @Autowired
     private ResourceReader resourceReader;
     @Autowired
