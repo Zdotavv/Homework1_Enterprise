@@ -1,6 +1,7 @@
-package com.zdotavv.homework1_enterprise.service;
+package com.zdotavv.homework1_enterprise.service.impl;
 
-import com.zdotavv.homework1_enterprise.ResourceReader;
+import com.zdotavv.homework1_enterprise.Application;
+import com.zdotavv.homework1_enterprise.service.ResourceReader;
 import com.zdotavv.homework1_enterprise.User;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +12,8 @@ import java.util.Scanner;
 
 @Getter
 @Setter
-public class QuizServiceImpl implements QuizService {
+public class QuizServiceImpl implements Application.QuizService {
+    @Autowired
     private ResourceReader resourceReader;
     @Autowired
     private User user;
@@ -20,8 +22,8 @@ public class QuizServiceImpl implements QuizService {
 
     public void answer() {
         Scanner scanner = new Scanner(System.in);
-        for (number = 0; number < resourceReader.getRecords().size(); number++){
-            System.out.println("Питання №: "+Question());
+        for (number = 0; number < resourceReader.getRecords().size(); number++) {
+            System.out.println("Питання №: " + Question());
             if (checkAnswer(scanner.nextLine())) {
                 score++;
             }
@@ -32,8 +34,8 @@ public class QuizServiceImpl implements QuizService {
 
     public String Question() {
         List<String> record = resourceReader.getRecords().get(number);
-        return record.get(0) +"\n" + String.join(
-                ", ", record.get(1)+ "\n"+ record.get(2)+"\n"+ record.get(3)+"\n"+ record.get(4)+"."+"\n"+ "Введіть номер відповіді: ") ;
+        return record.get(0) + "\n" + String.join(
+                ", ", record.get(1) + "\n" + record.get(2) + "\n" + record.get(3) + "\n" + record.get(4) + "." + "\n" + "Введіть номер відповіді: ");
     }
 
 

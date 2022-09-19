@@ -1,6 +1,7 @@
-package com.zdotavv.homework1_enterprise.service;
+package com.zdotavv.homework1_enterprise.service.impl;
 
 import com.zdotavv.homework1_enterprise.User;
+import com.zdotavv.homework1_enterprise.service.UserService;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ public class UserServiceImpl implements UserService {
     private User user;
 
     public void userNameAndSurname() {
-        System.out.println("\n"+"***ВАС ВІТАЄ ФУТБОЛЬНА ВІКТОРИНА***");
+        System.out.println("\n" + "***ВАС ВІТАЄ ФУТБОЛЬНА ВІКТОРИНА***");
         Scanner scanner = new Scanner(System.in);
         boolean isFilled = false;
         while (!isFilled) {
@@ -30,7 +31,7 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-    public boolean isInputNotEmpty() {
+    private boolean isInputNotEmpty() {
         return !user.getName().isEmpty() && !user.getSurname().isEmpty();
     }
 

@@ -1,7 +1,7 @@
 package com.zdotavv.homework1_enterprise;
 
-import com.zdotavv.homework1_enterprise.service.QuizServiceImpl;
-import com.zdotavv.homework1_enterprise.service.UserServiceImpl;
+import com.zdotavv.homework1_enterprise.service.impl.QuizServiceImpl;
+import com.zdotavv.homework1_enterprise.service.impl.UserServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,5 +13,11 @@ public class Application {
 
         userService.userNameAndSurname();
         quizService.answer();
+    }
+
+    public static interface QuizService {
+         void answer();
+        String Question();
+        boolean checkAnswer(String answer);
     }
 }

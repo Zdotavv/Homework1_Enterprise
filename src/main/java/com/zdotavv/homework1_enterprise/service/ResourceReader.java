@@ -1,4 +1,4 @@
-package com.zdotavv.homework1_enterprise;
+package com.zdotavv.homework1_enterprise.service;
 
 import lombok.Getter;
 import lombok.Setter;
